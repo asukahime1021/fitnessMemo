@@ -91,9 +91,8 @@ class _CalendarPageState extends ConsumerState {
                 actions: <Widget>[
                   TextButton(
                     child: const Text("キャンセル"), 
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },),
+                    onPressed: () => Navigator.pop(context),
+                  ),
                   TextButton(
                     child: const Text("OK"), 
                     onPressed: () async {
@@ -107,7 +106,8 @@ class _CalendarPageState extends ConsumerState {
                       ];
                       ref.read(eventListProvider.notifier).removeEvent(ref.read(selectedDayProvider)!, e);
                       Navigator.pop(context);
-                    },)
+                    },
+                  )
                 ]
               )
             );
